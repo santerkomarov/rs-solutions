@@ -45,7 +45,7 @@ class MainController extends Controller
             $requestData['file'] = $pdf_path;
         
             // Отправляем письмо о регистрации компании на сайте
-            Mail::to('hallinto@rambler.ru')->send(new CompanyRegistration());
+            Mail::to('mail@rmail.ru')->send(new CompanyRegistration());
             
             // Создаём компанию
             Company::create($requestData);
